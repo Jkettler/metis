@@ -1,0 +1,2 @@
+class CropCycle < ApplicationRecord
+end

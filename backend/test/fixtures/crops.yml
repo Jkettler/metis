@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  id: 
+  grow_cycle_days: 1
+  daily_cost: 1
+  sell_price: 1
+  ui_color: MyString
+
+two:
+  name: MyString
+  id: 
+  grow_cycle_days: 1
+  daily_cost: 1
+  sell_price: 1
+  ui_color: MyString
