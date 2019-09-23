@@ -11,3 +11,5 @@ Deploy steps:
 `cd metis`
 
 `./build.sh`
+
+Open your browser to localhost:3000 and enjoy :)
