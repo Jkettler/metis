@@ -7,7 +7,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <div>
-              Metis
+              <a href="https://www.theoi.com/Titan/TitanisMetis.html">Metis</a>
             </div>
           </header>
           <CropSelector/>

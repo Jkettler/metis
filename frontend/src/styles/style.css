@@ -1,6 +1,6 @@
 .App {
     color: white;
-    background-color: #282c34;
+    background-color: #0e4a11;
     text-align: center;
     min-height: 100vh;
     font-size: calc(10px + 2vmin);
@@ -9,6 +9,13 @@
     display: flex;
     font-family: courier, monospace;
 }
+a {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
 
 body {
     margin: 0;
@@ -16,4 +23,36 @@ body {
 
 .App-header {
     margin: 2.5vmin 0 2.5vmin 0;
+}
+
+.Metis-crop-selector {
+    margin-bottom: 2vmin;
+}
+
+.Metis-game-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.Metis-game-column {
+    display: flex;
+    flex-direction: row;
+}
+
+.Metis-plot-square {
+    align-items: center;
+    width: 10vmin;
+    height: 10vmin;
+    border:1px solid #000;
+}
+
+.Metis-view-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.Metis-crop-info {
+    color: black;
+    background-color: white;
+    margin-left: 2vmin;
 }
