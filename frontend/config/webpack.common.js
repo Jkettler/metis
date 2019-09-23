@@ -9,11 +9,6 @@ const config = {
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
-  node: {
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-  },
   entry: {
     app: './src/index.js'
   },

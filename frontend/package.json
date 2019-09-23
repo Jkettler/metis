@@ -1,13 +1,8 @@
 {
-  "name": "frontend",
+  "name": "metis",
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3001"
-    }
-  },
   "scripts": {
     "build": "./node_modules/.bin/webpack --config config/webpack.prod.js",
     "watch": "./node_modules/.bin/webpack --watch",
@@ -30,7 +25,6 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
-    "express": "^4.17.1",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
@@ -46,8 +40,10 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
     "@babel/polyfill": "^7.4.4",
+    "express": "^4.17.1",
     "axios": "^0.19.0",
     "cors": "^2.8.5",
+    "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

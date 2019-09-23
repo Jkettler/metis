@@ -1,20 +1,5 @@
 version: '3.7'
 services:
-  frontend:
-    build: ./frontend
-    container_name: frontend-con
-    user: "node"
-    working_dir: /metis/frontend
-    depends_on:
-      - "backend"
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./frontend:/metis/frontend
-    networks:
-      metis_net:
-
   backend:
     container_name: backend-con
     restart: unless-stopped
