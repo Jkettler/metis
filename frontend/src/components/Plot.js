@@ -9,18 +9,25 @@ class Plot extends Component {
       x: undefined,
       y: undefined,
     };
+    this.baseState = this.state;
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
     let { color, id, x, y } = this.props;
-    this.setState({
-      color: color,
-      id: id,
-      x: x,
-      y: y
-    });
-    this.props.onChange({color, id, x, y});
+
+    if(this.state.color === undefined || this.state.color === 'white'){
+      this.setState({
+        color: color,
+        id: id,
+        x: x,
+        y: y
+      });
+      this.props.onChange({color, id, x, y});
+    } else {
+      this.setState(this.baseState);
+      this.props.onChange({color: 'white', id: undefined, x: x, y: y});
+    }
   }
 
   render() {

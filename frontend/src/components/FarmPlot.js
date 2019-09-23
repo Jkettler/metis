@@ -26,7 +26,11 @@ class FarmPlot extends Component {
 
     let key = `${x}${y}`;
 
-    planted[key] = id;
+    if(planted[key] === undefined){
+      planted[key] = id;
+    } else {
+      planted[key] = undefined;
+    }
 
     this.setState({
       planted: planted
