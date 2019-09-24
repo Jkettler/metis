@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import FarmPlot from './FarmPlot';
 import CropInfo from './CropInfo';
+import CropTimer from './CropTimer';
 
 class CropSelector extends Component {
   constructor(props){
@@ -46,6 +47,9 @@ class CropSelector extends Component {
           <FarmPlot allCrops={crops} crop={selected}/>
           <div className="Metis-side-infos">
             <CropInfo infos={selected} cropInfo={crops}/>
+          </div>
+          <div className="Metis-crop-timer">
+          <CropTimer />
           </div>
         </div>
       </div>

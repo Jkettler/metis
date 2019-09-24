@@ -1,5 +1,25 @@
 import React, { Component } from 'react';
 
+
+export function countCrops(total) {
+  let values = Object.values(total);
+  let result = {};
+
+  values.map((k) => {
+    if(result[k] === undefined) {
+      result[k] = 1;
+    } else {
+      result[k] += 1;
+    }
+  });
+  return result;
+}
+
+export function calculateProfits(quantity, targetCrop) {
+  const { grow_cycle_days, daily_cost, sell_price } = targetCrop;
+  return ((sell_price * quantity) - (grow_cycle_days * daily_cost))
+}
+
 class ProfitCalculator extends Component {
   constructor(props){
     super(props);
@@ -9,36 +29,10 @@ class ProfitCalculator extends Component {
     };
   }
 
-  // componentDidMount(){
-  //   this.setState({
-  //     cropInfo: this.props,
-  //     total: this.props
-  //   })
-  // }
-
-  countCrops(total){
-    let values = Object.values(total);
-    let result = {};
-
-    values.map((k) => {
-      if(result[k] === undefined) {
-        result[k] = 1;
-      } else {
-        result[k] += 1;
-      }
-    });
-    return result;
-  }
-
-  calculateProfits(quantity, targetCrop) {
-    const { grow_cycle_days, daily_cost, sell_price } = targetCrop;
-    return ((sell_price * quantity) - (grow_cycle_days * daily_cost))
-  }
-
   render() {
 
     let { cropInfo, total } = this.props;
-    let counts = this.countCrops(total);
+    let counts = countCrops(total);
     let profit = 0;
 
     if(counts) {
@@ -50,7 +44,7 @@ class ProfitCalculator extends Component {
           }
         });
         if(current){
-            profit += this.calculateProfits(count, current);
+            profit += calculateProfits(count, current);
           }
 
       });
@@ -62,4 +56,6 @@ class ProfitCalculator extends Component {
       </div>
     )
   }
-}export default ProfitCalculator;
+}
+
+export default ProfitCalculator;
